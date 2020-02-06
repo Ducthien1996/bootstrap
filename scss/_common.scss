@@ -1,0 +1,57 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.footer {
+  @include format-text ($font-NunitoSans-Regular, 18px, $color-white, null);
+  background-color: $color-black;
+  padding: 90px 0;
+
+  &__title {
+    font-family: $font-Montserrat-Medium;
+    font-size: 18px;
+    font-weight: 800;
+  }
+
+  .list {
+    list-style-type: none;
+
+    &__link {
+      color: $color-white;
+      text-decoration: none;
+      transition: all .3s ease;
+      text-transform: capitalize;
+
+      &:hover {
+        color: $color-blue;
+      }
+    }
+  }
+
+  &__categories {
+    display: flex;
+  }
+
+  .our-address {
+    .mail {
+      color: $color-white;
+      text-decoration: none;
+
+      &:hover {
+        color: $color-blue;
+      }
+    }
+  }
+}
+
+.header-common {
+  .nav {
+    $this : '.nav';
+
+    .active {
+      #{$this}__link {
+        color: $color-blue;
+      }
+    }
+  }
+}
